@@ -1,0 +1,8 @@
+my:
+  storagetype: minio
+
+min:
+  io:
+    endpoint: http://locahost:8150/ # connected host
+    accessKey: user
+    secreteKey: password
