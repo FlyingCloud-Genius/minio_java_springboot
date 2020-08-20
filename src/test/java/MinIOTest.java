@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 /**
  * @Filename: MinIOTest
@@ -26,7 +27,7 @@ public class MinIOTest {
 
     @Test
     public void minioPut() {
-        String path = "C:\\Users\\Cloud\\Desktop";
+        String path = "C:\\Users\\yangyunteng\\Desktop";
         String fileName = "settings.xml";
         File file = new File(path + File.separator + fileName);
         FileInputStream inputStream;
@@ -40,6 +41,7 @@ public class MinIOTest {
 
     @Test
     public void minioGet() {
-
+        InputStream stream = storageService.get("test", "settings.xml");
+        System.out.println("finished");
     }
 }
