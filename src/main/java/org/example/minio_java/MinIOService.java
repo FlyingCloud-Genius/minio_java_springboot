@@ -41,12 +41,13 @@ public class MinIOService implements StorageService {
     }
 
     public InputStream get(String location, String fileName) {
-        if (!bucketExists(location))
-        try {
-            return minioClient.getObject(location, fileName);
-        } catch (Exception e) {
-            log.error("error in getting object from minio...");
-            e.printStackTrace();
+        if (bucketExists(location)) {
+            try {
+                return minioClient.getObject(location, fileName);
+            } catch (Exception e) {
+                log.error("error in getting object from minio...");
+                e.printStackTrace();
+            }
         }
         return null;
     }
