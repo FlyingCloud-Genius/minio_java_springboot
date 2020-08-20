@@ -14,6 +14,7 @@ import java.io.InputStream;
 public class DiskService implements StorageService {
 
     public void put(InputStream stream, String location, String fileName) {
+        //TODO: FileUtil
     }
 
     /**
@@ -22,7 +23,7 @@ public class DiskService implements StorageService {
      **/
     public InputStream get(String location, String fileName) {
         try {
-            return null;
+            return null; //TODO: FileUtil
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -35,5 +36,6 @@ public class DiskService implements StorageService {
      * @param fileName the file name saved in the storage
      **/
     public void delete(String location, String fileName) {
+        //TODO: FileUtil
     }
 }
